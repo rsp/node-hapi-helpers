@@ -20,6 +20,21 @@ describe('#hh.method()', function () {
     it('should work with list of methods as one string with punctuation', function () {
         assert.deepEqual(hh.method('  get ,  post  ', '/', 'h').method, ['GET', 'POST']);
     });
+    it('should throw with no arguments', function () {
+        assert.throws(function () {
+            hh.method();
+        });
+    });
+    it('should throw with too few arguments', function () {
+        assert.throws(function () {
+            hh.method('get', '/');
+        });
+    });
+    it('should throw with bad arguments', function () {
+        assert.throws(function () {
+            hh.method('get', [], 'h');
+        });
+    });
 
 });
 
