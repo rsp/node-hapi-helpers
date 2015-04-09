@@ -1,5 +1,5 @@
-node hapi helpers
-=================
+hapi.js helpers
+===============
 https://github.com/rsp/node-hapi-helpers
 
 Work in progress - more to come.
