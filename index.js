@@ -2,8 +2,6 @@
 // hapi-helpers
 // https://github.com/rsp/node-hapi-helpers
 
-var lo = require('lodash');
-
 module.exports = {
     method: method,
     get: get,
@@ -25,14 +23,15 @@ vhost is not supported yet
 */
 
 function method(Method, path, handler, config) {
-    if (lo.isString(Method)) {
+
+    if (typeof Method === 'string') {
         Method = Method.toUpperCase().replace(/[^A-Z*]+/g, ' ').trim();
         if (Method.match(/ /)) {
             Method = Method.split(' ');
         }
     }
-    if (lo.isArray(Method)) {
-        Method = lo.map(Method, function (x) { return x.toUpperCase(); });
+    if (Array.isArray(Method)) {
+        Method = Method.map(function (x) { return x.toUpperCase(); });
     }
     return {
         method: Method,
