@@ -8,6 +8,10 @@ describe('#hh.method()', function () {
     it('should return an object with correct method', function () {
         assert.propertyVal(hh.method('GET', '/', 'h'), 'method', 'GET');
     });
+    it('should return an object with correct uppercased method', function () {
+        assert.propertyVal(hh.method('get', '/', 'h'), 'method', 'GET');
+    });
+
 });
 
 describe('#hh.get()', function () {

@@ -24,7 +24,7 @@ vhost is not supported yet
 
 function method(Method, path, handler, config) {
     return {
-        method: Method,
+        method: Method.toUpperCase(),
         path: path,
         handler: handler,
         config: config
