@@ -24,6 +24,13 @@ vhost is not supported yet
 
 function method(Method, path, handler, config) {
 
+    if( (typeof Method !== 'string' && !Array.isArray(Method))
+        || (typeof path !== 'string')
+        || (typeof handler !== 'function' && typeof handler !== 'string' && typeof handler !== 'object')
+        || (config != null && typeof config !== 'object') ) {
+        throw new TypeError('Bad arguments');
+    }
+
     if (typeof Method === 'string') {
         Method = Method.toUpperCase().replace(/[^A-Z*]+/g, ' ').trim();
         if (Method.match(/ /)) {
