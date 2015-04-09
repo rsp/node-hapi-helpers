@@ -3,5 +3,9 @@
 // https://github.com/rsp/node-hapi-helpers
 
 module.exports = {
+	method: method
 };
+
+function method() {
+}
 
