@@ -11,6 +11,15 @@ describe('#hh.method()', function () {
     it('should return an object with correct uppercased method', function () {
         assert.propertyVal(hh.method('get', '/', 'h'), 'method', 'GET');
     });
+    it('should work with array of methods', function () {
+        assert.deepEqual(hh.method(['get', 'post'], '/', 'h').method, ['GET', 'POST']);
+    });
+    it('should work with list of methods as one string', function () {
+        assert.deepEqual(hh.method('get post', '/', 'h').method, ['GET', 'POST']);
+    });
+    it('should work with list of methods as one string with punctuation', function () {
+        assert.deepEqual(hh.method('  get ,  post  ', '/', 'h').method, ['GET', 'POST']);
+    });
 
 });
 
