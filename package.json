@@ -1,0 +1,26 @@
+{
+  "name": "hapi-helpers",
+  "version": "0.0.0",
+  "description": "Some helper functions for hapi.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rsp/node-hapi-helpers.git"
+  },
+  "keywords": [
+    "hapi"
+  ],
+  "author": {
+    "name": "Rafał Pocztarski",
+    "email": "r.pocztarski@gmail.com",
+    "url": "https://rsp.github.io/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rsp/node-hapi-helpers/issues"
+  },
+  "homepage": "https://github.com/rsp/node-hapi-helpers"
+}
