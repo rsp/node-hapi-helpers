@@ -198,7 +198,8 @@ module.exports = [{
     }
 }];
 ```
-Here is the same using hapi-helpers:
+Here is the same using hapi-helpers,
+available on [hapi-helpers-example](https://github.com/rsp/hapi-helpers-example):
 ```js
 var Types = require('hapi').types,
     hh = require('hapi-helpers'),
