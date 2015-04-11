@@ -1,6 +1,6 @@
 {
   "name": "hapi-helpers",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Some helper functions for hapi.js",
   "main": "index.js",
   "scripts": {
