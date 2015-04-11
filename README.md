@@ -1,10 +1,11 @@
 hapi.js helpers
 ===============
 
-[![Build Status](https://img.shields.io/travis/rsp/node-hapi-helpers.svg)](https://travis-ci.org/rsp/node-hapi-helpers)
-[![Test Coverage](https://img.shields.io/coveralls/rsp/node-hapi-helpers.svg)](https://coveralls.io/r/rsp/node-hapi-helpers?branch=master)
+[![Build Status](https://travis-ci.org/rsp/node-hapi-helpers.svg?branch=master)](https://travis-ci.org/rsp/node-hapi-helpers)
+[![Test Coverage](https://coveralls.io/repos/rsp/node-hapi-helpers/badge.svg?branch=master)](https://coveralls.io/r/rsp/node-hapi-helpers?branch=master)
 
-https://github.com/rsp/node-hapi-helpers
+[https://github.com/rsp/node-hapi-helpers](https://github.com/rsp/node-hapi-helpers)
+([readme](https://github.com/rsp/node-hapi-helpers#readme))
 
 Some helper functions for [hapi.js](http://hapijs.com/) to write less boilerplate code.
 Currently simplify routes definitions.
