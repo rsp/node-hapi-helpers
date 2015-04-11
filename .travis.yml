@@ -6,4 +6,7 @@ node_js:
     - "iojs"
     - "node"
 
-script: npm run test-on-travis
+script: npm test
+
+after_script: npm run coveralls
+
