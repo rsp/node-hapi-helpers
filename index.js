@@ -2,8 +2,10 @@
 // hapi-helpers
 // https://github.com/rsp/node-hapi-helpers
 
+"use strict";
+
 module.exports = {
-    method: method,
+    route: route,
     get: get,
     post: post,
     put: put,
@@ -22,26 +24,26 @@ config is an object (optional)
 vhost is not supported yet
 */
 
-function method(Method, path, handler, config) {
+function route(method, path, handler, config) {
 
-    if( (typeof Method !== 'string' && !Array.isArray(Method))
+    if( (typeof method !== 'string' && !Array.isArray(method))
         || (typeof path !== 'string')
         || (typeof handler !== 'function' && typeof handler !== 'string' && typeof handler !== 'object')
         || (config != null && typeof config !== 'object') ) {
         throw new TypeError('Bad arguments');
     }
 
-    if (typeof Method === 'string') {
-        Method = Method.toUpperCase().replace(/[^A-Z*]+/g, ' ').trim();
-        if (Method.match(/ /)) {
-            Method = Method.split(' ');
+    if (typeof method === 'string') {
+        method = method.toUpperCase().replace(/[^A-Z*]+/g, ' ').trim();
+        if (method.match(/ /)) {
+            method = method.split(' ');
         }
     }
-    if (Array.isArray(Method)) {
-        Method = Method.map(function (x) { return x.toUpperCase(); });
+    if (Array.isArray(method)) {
+        method = method.map(function (x) { return x.toUpperCase(); });
     }
     return {
-        method: Method,
+        method: method,
         path: path,
         handler: handler,
         config: config
@@ -49,30 +51,30 @@ function method(Method, path, handler, config) {
 }
 
 function get(path, handler, config) {
-    return method('GET', path, handler, config);
+    return route('GET', path, handler, config);
 }
 
 function post(path, handler, config) {
-    return method('POST', path, handler, config);
+    return route('POST', path, handler, config);
 }
 
 function put(path, handler, config) {
-    return method('PUT', path, handler, config);
+    return route('PUT', path, handler, config);
 }
 
 function patch(path, handler, config) {
-    return method('PATCH', path, handler, config);
+    return route('PATCH', path, handler, config);
 }
 
 function del(path, handler, config) {
-    return method('DELETE', path, handler, config);
+    return route('DELETE', path, handler, config);
 }
 
 function options(path, handler, config) {
-    return method('OPTIONS', path, handler, config);
+    return route('OPTIONS', path, handler, config);
 }
 
 function all(path, handler, config) {
-    return method('*', path, handler, config);
+    return route('*', path, handler, config);
 }
 

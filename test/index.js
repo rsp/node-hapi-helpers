@@ -1,38 +1,38 @@
 var assert = require('chai').assert,
     hh = require('../index');
 
-describe('#hh.method()', function () {
+describe('#hh.route()', function () {
     it('should be a function', function () {
-       assert.typeOf(hh.method, 'function', 'hh.method is a function');
+       assert.typeOf(hh.route, 'function', 'hh.route is a function');
     });
     it('should return an object with correct method', function () {
-        assert.propertyVal(hh.method('GET', '/', 'h'), 'method', 'GET');
+        assert.propertyVal(hh.route('GET', '/', 'h'), 'method', 'GET');
     });
     it('should return an object with correct uppercased method', function () {
-        assert.propertyVal(hh.method('get', '/', 'h'), 'method', 'GET');
+        assert.propertyVal(hh.route('get', '/', 'h'), 'method', 'GET');
     });
     it('should work with array of methods', function () {
-        assert.deepEqual(hh.method(['get', 'post'], '/', 'h').method, ['GET', 'POST']);
+        assert.deepEqual(hh.route(['get', 'post'], '/', 'h').method, ['GET', 'POST']);
     });
     it('should work with list of methods as one string', function () {
-        assert.deepEqual(hh.method('get post', '/', 'h').method, ['GET', 'POST']);
+        assert.deepEqual(hh.route('get post', '/', 'h').method, ['GET', 'POST']);
     });
     it('should work with list of methods as one string with punctuation', function () {
-        assert.deepEqual(hh.method('  get ,  post  ', '/', 'h').method, ['GET', 'POST']);
+        assert.deepEqual(hh.route('  get ,  post  ', '/', 'h').method, ['GET', 'POST']);
     });
     it('should throw with no arguments', function () {
         assert.throws(function () {
-            hh.method();
+            hh.route();
         });
     });
     it('should throw with too few arguments', function () {
         assert.throws(function () {
-            hh.method('get', '/');
+            hh.route('get', '/');
         });
     });
     it('should throw with bad arguments', function () {
         assert.throws(function () {
-            hh.method('get', [], 'h');
+            hh.route('get', [], 'h');
         });
     });
 
