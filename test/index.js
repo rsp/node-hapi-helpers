@@ -20,6 +20,25 @@ describe('#hh.route()', function () {
     it('should work with list of methods as one string with punctuation', function () {
         assert.deepEqual(hh.route('  get ,  post  ', '/', 'h').method, ['GET', 'POST']);
     });
+    it('should work with delete method in string', function () {
+        assert.deepEqual(hh.route('  get  delete  post  ', '/', 'h').method, ['GET', 'DELETE', 'POST']);
+    });
+    it('should work with delete method in array', function () {
+        assert.deepEqual(hh.route([' get ', '  delete  ', ' post '], '/', 'h').method, ['GET', 'DELETE', 'POST']);
+    });
+    it('should work with del method in string', function () {
+        assert.deepEqual(hh.route('  get  del  post  ', '/', 'h').method, ['GET', 'DELETE', 'POST']);
+    });
+    it('should work with del method in array', function () {
+        assert.deepEqual(hh.route([' get ', '  del  ', ' post '], '/', 'h').method, ['GET', 'DELETE', 'POST']);
+    });
+    it('should work with delete method in single string', function () {
+        assert.equal(hh.route('delete', '/', 'h').method, 'DELETE');
+    });
+    it('should work with del method in single string', function () {
+        assert.equal(hh.route('del', '/', 'h').method, 'DELETE');
+    });
+
     it('should throw with no arguments', function () {
         assert.throws(function () {
             hh.route();

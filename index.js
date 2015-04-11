@@ -34,13 +34,15 @@ function route(method, path, handler, config) {
     }
 
     if (typeof method === 'string') {
-        method = method.toUpperCase().replace(/[^A-Z*]+/g, ' ').trim();
+        method = method.toUpperCase().replace(/[^A-Z*]+/g, ' ').trim().replace(/^DEL$/, 'DELETE');
         if (method.match(/ /)) {
             method = method.split(' ');
         }
     }
     if (Array.isArray(method)) {
-        method = method.map(function (x) { return x.toUpperCase(); });
+        method = method.map(function (x) {
+            return x.toUpperCase().replace(/[^A-Z*]+/g, ' ').trim().replace(/^DEL$/, 'DELETE');
+        });
     }
     return {
         method: method,

@@ -14,9 +14,9 @@ Example
 You can write:
 ```js
 server.addRoutes([
-    get('/a/{id}', getA ),
-    del('/a/{id}', delA ),
-    route('get put post delete', '/b', handleB )
+    get('/a/{id}', getA),
+    del('/a/{id}', delA),
+    route('get put post delete', '/b', handleB)
 ]);
 ```
 Instead of:
@@ -71,6 +71,8 @@ and `method` can be a string or a list of strings e.g.:
 * `'get'`
 * `['get', 'post']`
 * `'get post'`
+
+You can use either `'del'` or `'delete'` for the DELETE method.
 
 For example: `hh.route('get post', path, handler, config)`
 
@@ -237,7 +239,7 @@ For any bug reports or feature requests please
 
 Author
 ------
-Rafał Pocztarski - https://github.com/rsp
+Rafał Pocztarski - [https://github.com/rsp](https://github.com/rsp)
 
 License
 -------
