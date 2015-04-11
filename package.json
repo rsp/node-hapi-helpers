@@ -8,7 +8,7 @@
     "test": "npm run check-coverage",
     "coverage": "istanbul cover _mocha test --recursive -- -u exports -R spec",
     "check-coverage": "istanbul cover _mocha test --recursive && istanbul check-coverage --statement 100",
-    "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+    "test-on-travis": "./node_modules/.bin/istanbul cover --report lcovonly ./node_modules/.bin/_mocha && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "repository": {
     "type": "git",
