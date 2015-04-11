@@ -58,6 +58,10 @@ To use just `get()`, `post()` etc:
 var hh = require('hapi-helpers'),
     get = hh.get, post = hh.post; // ...
 ```
+Or using [the ES6 destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
+```js
+var {get, post} = require('hapi-helpers');
+```
 
 Routes
 ------
