@@ -8,7 +8,18 @@ hapi.js helpers
 ([readme](https://github.com/rsp/node-hapi-helpers#readme))
 
 Some helper functions for [hapi.js](http://hapijs.com/) to write less boilerplate code.
-Currently simplify routes definitions.
+
+Currently it only simplifies the routes definitions.
+Feature requests welcome via [issues](#issues).
+
+It has no dependencies - only some devDependencies: it uses
+[chai](https://github.com/chaijs/chai),
+[mocha](https://github.com/mochajs/mocha),
+[istanbul](https://github.com/gotwarlost/istanbul) and
+[coveralls](https://github.com/cainus/node-coveralls)
+for testing and test coverage,
+and [Travis](https://travis-ci.org/) for continuous integration,
+see: [https://travis-ci.org/rsp/node-hapi-helpers](https://travis-ci.org/rsp/node-hapi-helpers))
 
 Example
 -------
