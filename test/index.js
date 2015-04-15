@@ -23,7 +23,7 @@ describe('#hh.route()', function () {
             hh.route('get , post', '/', 'h');
         });
     });
-    it('should work with list of methods as array with punctuation', function () {
+    it('should not work with list of methods as array with punctuation', function () {
         assert.throws(function () {
             hh.route([' get ,', ' post '], '/', 'h');
         });
