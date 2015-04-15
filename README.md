@@ -1,8 +1,11 @@
 hapi.js helpers
 ===============
 
+[![npm install hapi-helpers](https://nodei.co/npm/hapi-helpers.png?compact=true)](https://www.npmjs.com/package/hapi-helpers)
+<br>
 [![Build Status](https://travis-ci.org/rsp/node-hapi-helpers.svg?branch=master)](https://travis-ci.org/rsp/node-hapi-helpers)
 [![Test Coverage](https://coveralls.io/repos/rsp/node-hapi-helpers/badge.svg?branch=master)](https://coveralls.io/r/rsp/node-hapi-helpers?branch=master)
+[![Code Climate](https://codeclimate.com/github/rsp/node-hapi-helpers/badges/gpa.svg)](https://codeclimate.com/github/rsp/node-hapi-helpers)
 
 [https://github.com/rsp/node-hapi-helpers](https://github.com/rsp/node-hapi-helpers)
 ([readme](https://github.com/rsp/node-hapi-helpers#readme))
@@ -12,7 +15,7 @@ Some helper functions for [hapi.js](http://hapijs.com/) to write less boilerplat
 Currently it only simplifies the routes definitions.
 Feature requests welcome via [issues](#issues).
 
-It has no dependencies - only some devDependencies: it uses
+It has no dependencies - only some devDependencies (it uses
 [chai](https://github.com/chaijs/chai),
 [mocha](https://github.com/mochajs/mocha),
 [istanbul](https://github.com/gotwarlost/istanbul) and
@@ -54,6 +57,7 @@ server.addRoutes([
 
 Installation
 ------------
+Install to use in your project, updating the dependencies in package.json:
 ```sh
 npm install hapi-helpers --save
 ```

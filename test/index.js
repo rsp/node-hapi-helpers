@@ -17,8 +17,19 @@ describe('#hh.route()', function () {
     it('should work with list of methods as one string', function () {
         assert.deepEqual(hh.route('get post', '/', 'h').method, ['GET', 'POST']);
     });
-    it('should work with list of methods as one string with punctuation', function () {
-        assert.deepEqual(hh.route('  get ,  post  ', '/', 'h').method, ['GET', 'POST']);
+    it('should not work with list of methods as one string with punctuation', function () {
+        // assert.deepNotEqual(hh.route('  get ,  post  ', '/', 'h').method, ['GET', 'POST']);
+        assert.throws(function () {
+            hh.route('get , post', '/', 'h');
+        });
+    });
+    it('should work with list of methods as array with punctuation', function () {
+        assert.throws(function () {
+            hh.route([' get ,', ' post '], '/', 'h');
+        });
+    });
+    it('should work with array of methods with whitespace', function () {
+        assert.deepEqual(hh.route(['  get  ', '  post  '], '/', 'h').method, ['GET', 'POST']);
     });
     it('should work with delete method in string', function () {
         assert.deepEqual(hh.route('  get  delete  post  ', '/', 'h').method, ['GET', 'DELETE', 'POST']);
