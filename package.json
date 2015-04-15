@@ -1,6 +1,6 @@
 {
   "name": "hapi-helpers",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Define hapi.js routes with less code",
   "main": "index.js",
   "scripts": {
@@ -15,9 +15,29 @@
     "url": "https://github.com/rsp/node-hapi-helpers.git"
   },
   "keywords": [
-    "hapi", "hapi.js", "hapijs", "simple", "route", "routing", "routes", "router",
-    "api", "json", "rest", "restful", "http", "web", "framework", "utility", "functions",
-    "shortcut", "shortcuts", "helper", "helpers", "simplification", "boilerplate"
+    "hapi",
+    "hapi.js",
+    "hapijs",
+    "simple",
+    "route",
+    "routing",
+    "routes",
+    "router",
+    "api",
+    "json",
+    "rest",
+    "restful",
+    "http",
+    "web",
+    "framework",
+    "utility",
+    "functions",
+    "shortcut",
+    "shortcuts",
+    "helper",
+    "helpers",
+    "simplification",
+    "boilerplate"
   ],
   "author": {
     "name": "Rafał Pocztarski",
