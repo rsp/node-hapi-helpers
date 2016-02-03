@@ -1,6 +1,6 @@
 {
   "name": "hapi-helpers",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Define hapi.js routes with less code",
   "main": "index.js",
   "scripts": {
