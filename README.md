@@ -6,6 +6,7 @@ hapi.js helpers
 [![Build Status](https://travis-ci.org/rsp/node-hapi-helpers.svg?branch=master)](https://travis-ci.org/rsp/node-hapi-helpers)
 [![Test Coverage](https://coveralls.io/repos/rsp/node-hapi-helpers/badge.svg?branch=master)](https://coveralls.io/r/rsp/node-hapi-helpers?branch=master)
 [![Code Climate](https://codeclimate.com/github/rsp/node-hapi-helpers/badges/gpa.svg)](https://codeclimate.com/github/rsp/node-hapi-helpers)
+[![Downloads](https://img.shields.io/npm/dt/hapi-helpers.svg)](http://npm-stat.com/charts.html?package=hapi-helpers)
 
 [https://github.com/rsp/node-hapi-helpers](https://github.com/rsp/node-hapi-helpers)
 ([readme](https://github.com/rsp/node-hapi-helpers#readme))
